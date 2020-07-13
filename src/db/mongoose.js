@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect(process.env.connect,{
+mongoose.connect('mongodb+srv://dungbn1234567:Dungbn123@cluster0.rjtjs.mongodb.net/new-api-chat-app?retryWrites=true&w=majority',{
     useNewUrlParser:true,useUnifiedTopology: true,useFindAndModify:false
 })
 mongoose.set('useCreateIndex', true);
