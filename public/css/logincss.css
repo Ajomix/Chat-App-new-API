@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+    box-sizing: border-box; 
+    background-color: rgb(33, 31, 32);
+
+
+    /* background-image: linear-gradient(rgba(102, 117, 100, 0.411),rgba(102, 117, 100, 0.411)) , url('../img/backgroundLogin.png'); */
+    background-size: cover;
+}
+h1{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    left: 32%;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.loginBox{
+    position: absolute;
+    display: block;
+    background-color: #313131;
+    height: 550px;
+    width: 350px;
+    left: 50%;
+    top: 10%;
+    transform: translate(-175px);
+
+}
+.criteria{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 700;
+    color: #b9bbb2;
+    font-size: 15px;
+    left: 14%;
+    margin-top: 30px;
+    
+    /* line-height: 0px;
+    z-index: 1; */
+}
+.inp{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    font-size: 12px;
+    left: 13%;
+    outline: none;
+    border: none;
+    /* height: 5px; */
+    height: 5px;
+    background-color: #212125;
+    width: 250px;
+    border-top: solid rgb(121, 117, 117) 0.4mm;
+    color:#fff;
+    padding-left: 10px;
+    transition: 0.2s;
+
+}
+
+.inp:hover{
+    height: 40px;
+    border-top: solid #fff 0.4mm;
+}
+
+.hovers{
+    height: 40px;
+    border-top: solid #fff 0.4mm;
+}
+
+
+.login__form > button{
+    position: absolute;
+    background-color: #465f7c;
+    top: 55%;
+    left: 18px;
+    width: 90%;
+    height: 65px;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 700;
+    color: #b9bbb2;
+    font-size: 20px;
+    text-decoration: none;
+    border: solid 0.02mm #867b7b;
+    outline: none;
+}
+.login__form > button:active{
+    color: #fff;
+    background-color: #546b86;
+}
+
+.support__box{
+    position: absolute;
+    display: flex;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 13px;
+    outline: none;
+    top: 95%;
+    left: 10%;
+}
+.support{
+    margin-left: 10px;
+    color:#b9bbb2;
+}

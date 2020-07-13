@@ -1,0 +1,913 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  box-sizing: border-box; 
+  
+}
+ 
+.chat__sidebar{
+    background-color: #19191b;
+    display: block;
+    position: absolute ; 
+    width: 396px;
+    height: 100%;
+}
+.chat__divide1{
+    position: absolute;
+    background-color:#36393f;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 80px;
+    height: 97%;
+    border-radius: 10px;
+    display: block;
+}
+
+.home_btn{
+    position: relative;
+    /* background-image: url('https://lh3.googleusercontent.com/proxy/f-r7UmnjrQsLepDpz9OSRGomptQPvLiMv5wdUY4Ruc1VwdKpOVGMrfbXHMEMrNAN7QOui-Q-6GjI9BIBsP9q97E'); 
+    background-position:center;
+    background-size:cover;  */
+    background-color: #7289da;
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-left: 12px;
+    transition: 1s;
+}
+.btn__white{
+    position: absolute;
+    background-color: #fffefee5;
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 2px;
+    /* clip-path: ellipse(10% 46% at 0% 50%); */
+    clip-path: ellipse(10% 11% at 0% 52%);;
+    transition: 0.3s;
+    display: block;
+}
+.btn__white1{
+  position: absolute;
+  background-color: #fff;
+  width: 55px;
+  height: 55px;
+  margin-top: 1px;
+  margin-left: 2px;
+  /* clip-path: ellipse(10% 46% at 0% 50%); */
+  clip-path: ellipse(10% 11% at 0% 52%);;
+  transition: 0.3s;
+  display: block;
+}
+/* .btn__white:hover{
+  clip-path: ellipse(10% 46% at 0% 50%);
+} */
+.border__divide{
+  position: absolute;
+  
+  left: 10px;
+  top:73px;
+  display: block;
+  background-color:rgba(90, 87, 87, 0.836);
+  width: 60px;
+  height: 1px;
+}
+.home_btn:hover{
+  transition: 0.3s;
+  border-radius: 30%;
+}
+@keyframes bigger{
+    from{border-radius: 100%;}
+    to{border-radius: 30%;}
+}
+
+.group__slide{
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 75%;
+    top: 100px;
+}
+
+.chat_divide2{
+    background-color:#36393f ;
+    position: relative;
+    float: right;
+    width: 270px;
+    height: 97%;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-top: 10px;
+    display: block;
+
+}
+
+.search__btn{
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 300;
+    position: relative;
+    outline: none;
+    display: block;
+    left:3px;
+    height: 27px;
+    width: 94%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 6px;
+    border-radius: 6px;
+    border: none;
+    overflow: hidden;
+    background-color: #2b2b2c;
+    user-select: text;
+    color: white;
+}
+
+.avatar__friend__btn{
+    position: relative;
+    background-color: #36393f;
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-top: 3px;
+    border-top: solid black 0.02mm;
+}
+
+.friend__btn{
+    position: relative;
+    background-color: #36393f;
+    display: block;
+    width:100%;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #dcddde;
+    cursor: pointer;
+    
+}
+.active{
+  background-color:#696969; 
+  color: #ffff;
+}
+
+ /* active   background-color:#61646b; */
+.friend__btn_text{
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    left: 100px;
+    top: 5px;
+    
+}
+
+.img_avatar{
+    position: absolute;
+    background-image: url('/img/friend.png');
+    background-size: cover;
+    margin-top: 7px;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+.chat__bar{
+    position: absolute;
+    background-color: #2f3136;
+    width: 71%;
+    height: 100%;
+    left:29%;
+   
+}
+
+.status__bar{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 55px;
+    border-bottom: solid black 0.02mm;
+}
+
+.status__bar > a{
+    display: block;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    padding-top: 14px;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight:600;
+    font-size: 17px;
+    color: #b9bbb2;
+}
+ 
+.chatbar__btn:hover{
+    color: #cecece;
+}
+
+.active2{
+    color: #ffff !important;
+}
+
+.friend__col{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 75%;
+    overflow:  auto ;
+}
+.friend__listItems{
+    position: relative;
+    display: block;
+    height: 65px;
+    width: 90%;
+    margin-left: 30px;
+    border-top: solid #444850 0.02mm  ;
+    color:#fff;   
+}
+.friend__listItems:hover{
+    background-color:#414348 ;
+}
+
+.statusfriend__text{
+    display:block ; 
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight:200;
+    font-size: 13px;
+    margin-top: 40px;
+    left: 10%;
+    z-index: 1;
+}
+.statusfriend__img{
+    position: absolute;
+    /* background-color: #88a2ff; */
+    border-radius: 100%;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    margin-top: 42px;
+    left: 5%;
+    border: solid white 0.02mm;
+}
+.friend__name{
+    position: absolute;
+    display: block;
+    font-family:'Titillium Web', sans-serif ;
+    font-size: 15px;
+    font-weight:600;
+    margin-top: 10px;
+    left: 10%;
+}
+
+ 
+.friend__avatar{
+    position: absolute;
+    background-size: cover;
+    display: block;
+    width: 40px;
+    height:40px;
+    border-radius:100%;
+    left: 10px;
+    top: 6px;
+}
+.friend__avatar2{
+    position: absolute;
+    background-size: cover;
+    display: block;
+    width: 40px;
+    height:40px;
+    border-radius:100%;
+    left: 10px;
+    top: 12px;
+}
+
+.addfr__btn{
+    display: block;
+    position: absolute;
+    width:30%;
+    height: 30px;
+    margin-top: 50px;
+    left: 37%;
+    text-align: center;
+    color: #b9bbb2;
+    font-family:'Titillium Web', sans-serif ;
+    font-size: 15px;
+    font-weight:300;
+    text-decoration: none;
+}
+.addfr__btn:hover{
+    color: #fff;
+    padding: 4px;
+}
+.addfr__layout{
+    position: absolute;
+    background-image: url('../img/plus.png');
+    background-color: rgba(255, 255, 255, 0.849);
+    background-repeat: no-repeat;
+    background-position:center ;
+    border-radius: 100%;
+    background-size:20px ;
+    width: 30px;
+    height:100%;
+    left: 10px;
+}
+.addfr__text{
+    margin-top: 3px;
+}
+
+.userbar{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-bottom: solid #444850 0.02mm ;
+    
+}   
+
+.name__display__inforUser{
+    display: inline-flexbox;
+    width: 60%;
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.name__display__status{
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid white 0.02mm;
+    margin-top: 6px;
+    margin-left: 12px;
+}
+
+.call__btn{
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height:40px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.searchCv__btn{
+    background-color: #1e1f21;
+    outline: none;
+    user-select: text;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    border:none;
+    border-bottom: solid #444850 0.2mm;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 27px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.searchCv__btn:hover{
+    border-bottom: solid #fff 0.2mm;
+}
+
+.boardchat{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height:560px;
+    overflow: auto;
+}
+
+.input__btn{
+    position: relative;
+    display: block;
+    width: 96%;
+    height: 50px;
+    left: 2%;
+    top: 3px;
+}
+
+
+.message__chat{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: inherit;
+    margin-top: 5px;
+}
+.message__chat:hover{
+    background-color:#222427 ;
+} 
+/* .message__chat{
+    position: relative;
+    word-break: break-all;
+    display: block;
+    width: 100%;  
+    height: auto;
+    font-size: 15px;
+}
+.message__chat:hover{
+    background-color:#222427 ;
+    
+} */
+
+.name__user__boardchat{
+    position: relative;
+    display: inline;
+    left: 85px;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 700;
+    color: #fff;
+    font-size: 15px;
+    top: 5px;
+}
+ 
+.message-content{
+    position: relative;
+    display: block;
+    word-break: break-all;
+    font-family: 'Titillium Web', sans-serif ;
+    height: auto;
+    font-weight: 300;
+    font-size: 15px;
+    color: #afa9a9;
+    left: 85px;
+    width: 90%;
+    padding-right: 20px;
+    min-height: 48px;
+    margin-top: 5px;
+}
+ 
+
+.time__send{
+    position: relative;
+    display:contents;
+    margin-left:5px ;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 200;
+    font-size: 12px;
+}
+.btn__send{
+    position: absolute;
+    width:77px;
+    height:42px;
+    left: 90%;
+    background-image: url('../img/send.png');
+    background-attachment: scroll;
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: none;
+}
+.input_chat__form{
+    resize: none;
+    position: absolute;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 200;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom:2px ;
+    height:40px;
+    width: 88%;
+    margin-top: 2px;
+    text-decoration: none;
+    border: none;
+    background-color: #2b2b2c;
+    color: #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #27282b;
+    border-radius: 20px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#5c5f65; 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5c5f65; 
+  }
+
+
+
+  .listfriend{
+    position: relative;
+    width: 100%;
+    height: 50%;
+     
+    
+}
+.myProfile{
+    position: relative;
+    width: 100%;
+     
+    height:21%;
+}
+
+.board_status{
+    position: relative;
+    width: 100%;
+   
+    height: 83px;
+}
+.board_name
+{
+    position: relative;
+    width: 100%;
+    height: 45%;
+    border-top: solid 0.02mm black;
+    background-color: #252424;
+}
+.statusfriend__img2{
+    position: absolute;
+    /* background-color: #88a2ff; */
+    border-radius: 100%;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    margin-top: 32px;
+    left: 15%;
+    border: solid white 0.02mm;
+}
+ 
+.board_name_href{
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif ;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 15px ;
+    left: 25%;
+    top:10px;
+}
+.username_text{
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif ;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    font-weight: 200;
+    font-size: 12px ;
+    left: 25%;
+    top:30px;
+}
+
+
+.profile{
+    width: 100%;
+    height: 92%;
+    overflow: auto;
+}
+
+
+.profileBar{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    font-size: 20px ;
+    width: 100%;
+    height: 8%;
+    background-color: #292d2d;
+    border-bottom: 0.02mm black solid;
+    color: #dcdddeb8;
+}
+.profileBar >p{
+    position: absolute;
+    display: block;
+    top:10px;
+    left: 20px;
+     
+}
+
+.update_avatar{
+    position: relative;
+    width: 100%;
+    height: 50%;
+     background-color: #5a4848;
+    
+}
+
+.update_avatar > img{
+    position: relative;
+    background-size:cover ;
+    background-position: center;
+    width:150px;
+    height: 150px;
+    border-radius: 100%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+    border: solid 0.5mm #dfe8f4;
+}
+.update_avatar>div{
+    position: absolute;
+    
+    width:150px;
+    height: 150px;
+    border-radius: 100%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+}
+.update_avatar>div>div{
+    position: absolute;
+   
+    width:150px;
+    height: 150px;
+    border-radius: 100%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+}
+.update_avatar>div>div>input{
+    position: absolute;
+    width:150px;
+    height: 150px;
+    border-radius: 100%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+    z-index: 1;
+    outline: none;
+    opacity: 0;
+}
+.update_avatar>div>div:hover{
+    background-image: url('/img/edit.png');
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.update_avatar>div:hover{
+    background-color: rgba(173, 173, 173, 0.568);
+}
+.update_avatar>p{
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 300;
+    color: #767a84;   
+    font-size: 15px;
+    letter-spacing: 0.2mm;
+    left: 50%;
+    transform: translate(-50%);
+    top:65%;
+}
+ 
+.profile_form{
+    position: relative;
+    transition: 0.2s;
+    left: 0px;
+}
+.profile_formActive{
+    position: relative;
+    transition: 0.2s;
+    left: -100%;
+}
+.profile_form>div>p{
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    font-size: 15px;
+    color: #cecece;
+    left: 15px;
+    margin-top: 15px;
+    letter-spacing: 0.2mm;
+}
+.profile_form>div>input{
+    position: relative;
+    display: block;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%);
+    margin-top: 15px;
+    background-color: #424242;
+    outline: none;
+    text-decoration: none;
+    color: #bfbfbf;
+    border: solid 0.02mm #796969;
+    padding: 10px;
+    border-radius: 9px;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 300;
+    letter-spacing: 0.2mm;
+}
+
+.edit_btn{
+    display: block;
+     top:60px;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-color: #545252;
+    left: 50%;
+    transform: translate(-50%);
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+}
+.edit_btn:hover{
+    margin: 5px;
+}
+
+.edit_btn>p{
+    left: 40%;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 700;
+    letter-spacing: 0.2mm;
+    font-size: 20px;
+    margin-top: 3px;
+    position: absolute;
+}
+.edit_btn>div{
+    position: absolute;
+    background-image: url('/img/edittext.png');
+    width: 50px;
+    height: 36px;
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+/* #252424 */
+
+.friend_box{
+    position: relative;
+    background-color: #332f2f;
+    display: block;
+    width: 95%;
+    left: 2.5%;
+    height: 50px;
+    z-index: 1;
+    text-align: center;
+    margin-top: 2px;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.friend_box>p{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    top: 10px;
+}
+
+.friend_box:hover{
+    background-color: #6b6868;
+}
+
+.layout__friendbox{
+    position: absolute;
+    display: block;
+    background-image: url('../img/xicon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    left: 90%;
+    top: 19px;
+     
+}
+
+ .listfriend>p{
+     position: relative;
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    left: 20%;
+    letter-spacing: 5px;
+     padding-top: 10px;
+ }
+
+ .update_Form{
+     position: relative;
+     background-color: #fff;
+     width: 100%;
+     height:100px;
+     left: 200%;
+ }
+
+
+
+
+
+ .popup {
+    top: 30%;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    left: 85%;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    outline:none; 
+    font-family: 'Titillium Web', sans-serif ;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  .imgpopup{
+      width:30px; 
+      height:30px; 
+        transition: 0.2s;
+  }
+.imgpopup:hover{
+    transform: rotate(180deg);
+}

@@ -1,0 +1,255 @@
+ <DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;700&display=swap" rel="stylesheet">
+           
+            <link rel="stylesheet" href="/css/styles.css">
+            <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+          
+            <title>Chat app</title>
+        </head>
+    <body>
+           
+            
+        <div id="sidebar"class="chat__sidebar">
+                <div class="chat__divide1">
+                    <div class="btn__white"></div>
+                    <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                    <div class="border__divide"></div>
+    
+                    <div class="group__slide">
+    
+                        <!-- add new user 
+                         -->
+                          
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div> 
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                               
+                            <div>
+                                <div class="btn__white1"></div>
+                                <a href="#" class="home_btn" onmouseover="big(this.parentElement.firstElementChild)" onmouseout="normal(this.parentElement.firstElementChild)"></a>
+                            </div>
+                       
+                    </div>
+                </div>
+    
+                <div class="chat_divide2">
+                    
+                        <input placeholder="Search your conversation" class="search__btn">
+    
+                        <div class="avatar__friend__btn" > 
+                            <a href="/myfriend" class="friend__btn" onmouseover="lighten(this)" onmouseout="normalColor(this)" >
+                                <div class="img_avatar" style="background-image: url('../img/friend.png')"></div>
+                                <div class="friend__btn_text" >Friends</div>
+                            </a>
+                            <a href="/profile/me" class="friend__btn active" onmouseover="lighten(this)" onmouseout="normalColor(this)" >
+                                <div class="img_avatar" style="background-image: url('../img/create.png')"></div>
+                                <div class="friend__btn_text" >Profile</div>
+                            </a>
+                            <a href="#" class="friend__btn"onmouseover="lighten(this)" onmouseout="normalColor(this)">
+                                <div class="img_avatar" style="background-image: url('../img/music.png')"></div>
+                                <div class="friend__btn_text" >Music</div>
+                            </a>
+                        </div>
+                
+                        
+                <div class="listfriend">
+                        <p>  -     All Friend -</p>
+                        <a href="/chat/{{idGeneral}}" class="friend_box" onmousemove="hov(this)" onmouseout="unhov(this)">
+                            <img src="data:image/jpeg;base64,{{avatarUsermain}}" alt="" class="friend__avatar">
+                            <p>{{displaynames}}</p>
+                            <div class=""></div>
+                        </a>
+                       
+                </div>
+                    <div class="myProfile">
+                        <div class="board_status">
+
+                        </div>
+                        <div class="board_name">
+                             
+                            <img   src="data:image/jpeg;base64,{{avatar}}" alt="" class="friend__avatar" />
+                            <div class="statusfriend__img2" style="background-color: #00ff0d;"></div>
+                            </img>
+                            
+                            <a href="#" class="board_name_href">
+                                {{displayname}}
+                            </a>
+                             <a href="#" class="username_text"> 
+                                #{{username}}
+                            </a>
+                             
+                            <div class="popup" onclick="myFunction()"> 	 
+                                
+                                <div class="imgpopup" style="background-color: rgba(252, 252, 252, 0.733);border-radius:100%" >
+                                    <img class="imgpopup" src="../img/setting.png">
+                                </div>
+                                <a class="popuptext" href="/logout"id="myPopup">Log Out</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                     
+                </div>
+            </div>
+   
+            <div class="chat__bar">
+                 <nav class="profileBar">
+                    <p> @Profile</p>
+                </nav>
+                <div class="profile">
+                    
+                    <div class="update_avatar">
+                        
+                        <img src="data:image/jpeg;base64,{{avatar}}" alt="">
+                            
+                        <div>
+                            
+                            <div>
+                                <input type="file" accept="image/*" id="avatar_changed" name="avatar">
+                            </div>
+                        </div>
+
+                        <p>ID:{{id}}</p>
+
+                    </div>
+                    
+                    <div class="profile_form">
+                        <div>
+                            <p>Name:</p>
+                            <input type="displayname" name="displayname" readonly value="{{displayname}}" id="update_displayname">
+                        </div>
+                        <div>
+                            <p>Username:</p>
+                            <input type="username" name="username" readonly value="{{username}}" id="update_username">
+                        </div>
+                        <div>
+                            <p>Email:</p>
+                            <input type="email" name="email" readonly value="{{email}}" id="update_email">
+                        </div>
+                        
+                        
+                    </div>
+                    {{!-- <div class="update_Form">
+                        
+                    </div> --}}
+                <a href="#" class="edit_btn">
+                            <p>Change</p>
+                            <div></div>
+                </a>
+            </div>
+    
+         
+    
+        <script id="message-template" type="text/html">
+            
+            <div class="message__chat" id='message-0' >
+                        <div class="name__user__boardchat"> $name
+                            <div class="time__send">$timestamp </div>
+                        </div>
+                        <img class="friend__avatar"  src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.0-9/79022876_619286168892708_7166557467755675648_n.jpg?_nc_cat=110&_nc_sid=85a577&_nc_oc=AQkWBGFdOYXIWNPwrE2Y_3RoQFEo0-9fiawyd-rs8srAzvSNiMIK6fqr3DDUYOhqrb8&_nc_ht=scontent-hkg4-1.xx&oh=a33508ad5de59abf87bade4497329a82&oe=5F29BA12" alt=""  ></img>
+                        <pre class="message-content">$message</pre>
+            </div> 
+            
+        </script>
+       
+        <script id="main-template" type="text/html">
+              <nav class='status__bar'>
+                    <a href="#" class="chatbar__btn active2">All Friend</a>
+                    <a href="#" class="chatbar__btn">Online</a>
+                    <a href="#" class="chatbar__btn">Text</a>
+                    <a href="#"class="chatbar__btn">Text</a>
+                    <a href="#"class="chatbar__btn">Text</a>
+                </nav>
+                <div class="friend__col">
+                     
+                </div>
+                 
+    
+                <a href="#"class="addfr__btn"> 
+                    <div class="addfr__layout"></div>
+                    <div class="addfr__text">Add Friend</div>
+                </a> 
+        </script>
+     {{!-- #dfe8f4 offline status --}}
+        <script id="listfriend-template" type="text/html">
+            <a href="#" class="friend__listItems">
+                            <div class="friend__name"> $name </div>
+                            <div class="statusfriend__text">$status</div>
+                            <div class="statusfriend__img" style="background-color: $status_color"></div>
+                            <div class="friend__avatar" style="background-image: url('$avatar');"></div>
+            </a>
+        </script>
+        
+        <script id="chat__bar_template" type="text/html">
+
+            <nav class="userbar">
+                    <a href="#" class="name__display__inforUser">
+                              $name
+                        <div class="name__display__status" style="background-color: #grey;"></div>
+                    </a>
+    
+                    <a href="#" class="call__btn" style="background-image: url('/img/call.svg');">
+                         
+                    </a>
+                    <a href="#" class="call__btn"style="background-image: url('/img/callvideo.svg');">
+                         
+                    </a>
+                    <input type="text" placeholder="Search in Conversation" class="searchCv__btn"> 
+                </nav>
+    
+                <div class="boardchat"  id="messenge">
+                    
+                    $listMessage
+
+                </div>
+              
+
+            <form  class="input__btn" id="messenge-form">
+                <textarea type="text" class="input_chat__form" placeholder="Your Message" required id="message"  ></textarea>
+                <button  type="submit" class="btn__send"></button>
+            </form>
+
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+        <script src="/js/profile.js"></script>
+         
+</body>
+</html>

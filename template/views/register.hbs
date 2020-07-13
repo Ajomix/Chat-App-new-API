@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="loginBox">
+        <form class="login__form">
+            <h1>REGISTER</h1>
+            <span>
+                <p class="criteria" onmousemove="bigger(this)" onmouseout="normal(this)">Display Name</p>
+                <input type="text"  name="displayname" class="inp" onkeyup="doing(this)" id="displayname">    
+            </span>
+
+           <span>
+            <p class="criteria"onmousemove="bigger(this)" onmouseout="normal(this)" >Username</p>
+            <input type="text" name="username" class="inp" onkeyup="doing(this)" id="username">
+           </span>
+
+            <span>
+            <p class="criteria"onmousemove="bigger(this)" onmouseout="normal(this)" >Email</p>
+            <input type="text" name="email" class="inp" onkeyup="doing(this)" id="email">
+           </span>
+
+            <span>
+            <p class="criteria"onmousemove="bigger(this)" onmouseout="normal(this)" >Password</p>
+            <input type="password" name="password" class="inp" onkeyup="doing(this)" id="password">
+           </span>
+            
+            <button type="submit">Submit</button>
+        </form>
+       
+    </div>
+
+    <script src="./js/register.js"></script>
+</body>
+</html>

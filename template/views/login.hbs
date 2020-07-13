@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/logincss.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="loginBox">
+        <form class="login__form" action="/user/login" method="POST">
+            <h1>LOGIN</h1>
+            <span>
+                <p class="criteria" onmousemove="bigger(this)" onmouseout="normal(this)">Username</p>
+                <input type="username"  name="username" class="inp" onkeyup="doing(this)" id="username">    
+            </span>
+
+           <span>
+            <p class="criteria"onmousemove="bigger(this)" onmouseout="normal(this)" >Password</p>
+            <input type="password" name="password" class="inp" onkeyup="doing(this)" id="password">
+           </span>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <nav class="support__box">
+            <a href="#" class="support">Forgot your Password ?</a>
+            <a href="/register" class="support">Don't have account ?</a>
+         </nav>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>
