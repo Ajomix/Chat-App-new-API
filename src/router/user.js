@@ -216,7 +216,8 @@ router.post('/user/add/:username',async(req,res)=>{
                     return true
                 }
             })
-            if(!check){
+            
+            if(!check && userAdd.username !== req.user.username){
                 const message = new Message({_id:idGeneral})
                 req.user.friends = req.user.friends.concat({_id:idGeneral,friend:idUserAdd})
                 userAdd.friends  = userAdd.friends.concat({_id:idGeneral,friend:req.user._id})
