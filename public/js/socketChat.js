@@ -14,7 +14,7 @@ socket.on('message',({name,message,timestamp,avatar})=>{
     if(namedisplay.length !== 0 ){
         if(namedisplay[namedisplay.length - 1].innerText.includes(name)){
             autoScroll();
-
+            console.log('click')
             
             return document.querySelectorAll('.message-content')[namedisplay.length - 1].innerText += '\n' + message.toString();
             
@@ -22,16 +22,23 @@ socket.on('message',({name,message,timestamp,avatar})=>{
     }
     autoScroll();
     //moment(timestamp).format('lll')
-    let html = $messageTemplate
-                .replace('$name',name)
-                .replace('$timestamp',moment(timestamp).format('lll'))  
-                .replace('$avatar',avatar);
-                 
-    document.querySelector('.boardchat').insertAdjacentHTML('beforeend',html);
-    return  document.querySelector('.message-content').innerText =   message ;
+    let html = `<div class="message__chat" id='message-0' >
+    <div class="name__user__boardchat"> {{name}}
+        <div class="time__send">{{timestamp}}</div>
+    </div>
+    <img class="friend__avatar"  src="data:image/jpeg;base64,{{avatar}}" alt=""  ></img>
+    <pre class="message-content" >{{message}}</pre>
+    </div> `;
+    html = Mustache.render(html, {
+        name,
+        timestamp:moment(timestamp).format('lll'),
+        avatar, 
+        message
+    });
+    return document.querySelector('.boardchat').insertAdjacentHTML('beforeend',html);
     
 });
-
+ 
 if(document.querySelector('#messenge-form')){
     document.querySelector('#messenge-form').addEventListener('submit',(e)=>{
         e.preventDefault();
